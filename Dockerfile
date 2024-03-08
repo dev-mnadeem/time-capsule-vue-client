@@ -3,7 +3,7 @@
 ###############################################################################
 # 1. Dependencies — cached independently of the source tree.
 ###############################################################################
-FROM node:20-alpine AS deps
+FROM node:22-alpine AS deps
 
 WORKDIR /app
 COPY package.json package-lock.json ./
@@ -15,7 +15,7 @@ RUN npm ci --no-audit --no-fund
 # `VUE_APP_*` values are inlined by webpack at build time, so the API URL is a
 # build argument rather than a runtime environment variable.
 ###############################################################################
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 ARG VUE_APP_API_BASE_URL=http://localhost/api/v1/
 ARG VUE_APP_DEMO=false
