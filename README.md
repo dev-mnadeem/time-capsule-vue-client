@@ -238,3 +238,7 @@ docker compose build --build-arg VUE_APP_API_BASE_URL=https://api.example.com/ap
 - **No end-to-end tests, no offline support, no i18n, no dark theme.** The suite
   is unit and component level; the Playwright run that produced the screenshots
   asserts nothing. Dates use the browser's locale, the rest is English.
+
+## Author
+
+[**Muhammad Nadeem**](https://github.com/dev-mnadeem)
